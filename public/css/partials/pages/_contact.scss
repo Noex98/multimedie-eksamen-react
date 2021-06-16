@@ -1,0 +1,72 @@
+.contact__main {
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply,multiply;
+    .main__info {
+        display:flex;
+        justify-content: space-around;
+        padding:12px;
+        height: 50vh;
+        align-items: center;
+        div {
+            background-color: rgb(207, 207, 207);
+            border-radius: 3px;
+            padding:36px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 0 12px 15px -8px black;
+            img {
+                width:100%;
+                max-width: 200px;
+                padding-bottom:36px;
+                transition: transform 200ms;
+            }
+            img:hover {
+                transform:scale(1.08);
+            }
+            p {
+                text-align: center;
+                color:black;
+                font-size:1.5rem;
+            }
+        }
+    }
+
+    .main__map {
+        .map__header {
+            font-size:1.5rem;
+            text-align: center;
+            padding-bottom:24px;
+        }
+        #map {
+            height: 50vh;
+            .marker {
+                background-image: url("../media/images/contact/mapbox-icon.png");
+                background-size: cover;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+            .mapboxgl-popup {
+                max-width: 200px;
+            }
+            .mapboxgl-popup-content {
+                text-align: center;
+                font-family: 'Open Sans', sans-serif;
+                color:black;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .main__info {
+            height: auto;
+            flex-direction: column;
+            div {
+                margin: 30px auto;
+            }
+        }
+    }
+}
